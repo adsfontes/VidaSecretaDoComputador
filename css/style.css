@@ -1,0 +1,1947 @@
+
+/* =====================================================
+   VIDA SECRETA DO COMPUTADOR
+   CSS PRINCIPAL
+
+   Estilo:
+   - Game educativo
+   - Glassmorphism
+   - Responsivo
+   - Visual moderno infantil
+===================================================== */
+
+
+
+/* ===========================
+   RESET GERAL
+=========================== */
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    min-height: 100vh;
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+/* ===========================
+   FUNDO
+=========================== */
+
+
+.fundo-gradiente {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+
+    background:
+        linear-gradient(
+            135deg,
+            #050816,
+            #102542,
+            #1d4ed8
+        );
+
+
+}
+
+
+
+
+
+/* ===========================
+   PARTÍCULAS DECORATIVAS
+=========================== */
+
+
+.particulas span {
+
+
+    position: fixed;
+
+    width: 12px;
+
+    height: 12px;
+
+    background: rgba(255,255,255,0.25);
+
+    border-radius: 50%;
+
+    animation:
+        flutuar 10s infinite linear;
+
+
+    z-index: -1;
+
+}
+
+
+
+.particulas span:nth-child(1) {
+
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+
+}
+
+
+
+.particulas span:nth-child(2) {
+
+    left: 80%;
+    top: 15%;
+    animation-delay: 2s;
+
+}
+
+
+
+.particulas span:nth-child(3) {
+
+    left: 50%;
+    top: 70%;
+    animation-delay: 4s;
+
+}
+
+
+
+.particulas span:nth-child(4) {
+
+    left: 25%;
+    top: 80%;
+    animation-delay: 1s;
+
+}
+
+
+
+.particulas span:nth-child(5) {
+
+    left: 90%;
+    top: 60%;
+    animation-delay: 3s;
+
+}
+
+
+
+.particulas span:nth-child(6) {
+
+    left: 65%;
+    top: 40%;
+    animation-delay: 5s;
+
+}
+
+
+
+
+
+@keyframes flutuar {
+
+
+    0% {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity: 0.5;
+
+    }
+
+
+
+    50% {
+
+        transform:
+            translateY(-80px)
+            scale(1.4);
+
+        opacity: 1;
+
+    }
+
+
+
+    100% {
+
+        transform:
+            translateY(-160px)
+            scale(0.8);
+
+        opacity: 0;
+
+    }
+
+
+}
+
+
+
+
+
+/* ===========================
+   CONTAINERS
+=========================== */
+
+
+.container {
+
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   CARD INICIAL
+=========================== */
+
+
+.card-inicial {
+
+
+    width: 100%;
+
+    max-width: 650px;
+
+    text-align: center;
+
+
+    padding: 50px;
+
+
+    background:
+
+        rgba(255,255,255,0.12);
+
+
+    backdrop-filter:
+
+        blur(15px);
+
+
+
+    border:
+
+        1px solid rgba(255,255,255,0.25);
+
+
+
+    border-radius: 30px;
+
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,0.35);
+
+
+
+    animation:
+
+        aparecer 1s ease;
+
+
+}
+
+
+
+
+
+.logo {
+
+
+    width: 180px;
+
+    max-width: 80%;
+
+
+    animation:
+
+        pulsar 3s infinite;
+
+
+}
+
+
+
+
+
+.card-inicial h1 {
+
+
+    margin-top: 25px;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+
+}
+
+
+
+
+
+.descricao {
+
+
+    margin: 25px auto;
+
+
+    line-height: 1.8;
+
+
+    font-size: 17px;
+
+
+    color:
+
+        rgba(255,255,255,0.9);
+
+
+}
+
+
+
+
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+
+.botao-principal {
+
+
+    border: none;
+
+
+    padding: 16px 35px;
+
+
+    margin-top: 20px;
+
+
+    border-radius: 50px;
+
+
+    cursor: pointer;
+
+
+    font-size: 16px;
+
+
+    font-weight: 700;
+
+
+    color: white;
+
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+
+
+    transition:
+
+        0.3s;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,0.25);
+
+
+
+}
+
+
+
+.botao-principal:hover {
+
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+
+}
+
+
+
+
+.botao-secundario {
+
+
+    padding: 14px 30px;
+
+
+    border-radius: 50px;
+
+
+    border: none;
+
+
+    cursor: pointer;
+
+
+    font-weight: 700;
+
+
+    background:
+
+        rgba(255,255,255,0.15);
+
+
+    color:white;
+
+
+    backdrop-filter: blur(10px);
+
+
+}
+
+
+
+.botao-secundario:hover {
+
+
+    background:
+
+        rgba(255,255,255,0.3);
+
+
+}
+
+
+
+
+
+@keyframes aparecer {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+            translateY(50px);
+
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+@keyframes pulsar {
+
+
+    0%,100% {
+
+        transform:scale(1);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.05);
+
+    }
+
+
+}
+
+/* =====================================================
+   MAPA DO JOGO
+===================================================== */
+
+
+
+.pagina-mapa {
+
+    padding-bottom: 40px;
+
+}
+
+
+
+
+
+/* ===========================
+   HUD
+=========================== */
+
+
+.hud {
+
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    gap: 20px;
+
+
+    padding: 25px;
+
+
+    background:
+
+        rgba(255,255,255,0.12);
+
+
+
+    backdrop-filter:
+
+        blur(15px);
+
+
+
+    border-radius: 25px;
+
+
+    border:
+
+        1px solid rgba(255,255,255,0.2);
+
+
+
+}
+
+
+
+.hud-item {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.hud-item strong {
+
+
+    font-size:28px;
+
+}
+
+
+
+
+
+/* Barra de progresso */
+
+
+.barra-container {
+
+
+    flex:1;
+
+}
+
+
+
+.barra-texto {
+
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+
+}
+
+
+
+.barra-progresso {
+
+
+    width:100%;
+
+    height:18px;
+
+
+    background:
+
+        rgba(0,0,0,0.25);
+
+
+    border-radius:50px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.barra-preenchida {
+
+
+    width:0%;
+
+
+    height:100%;
+
+
+    border-radius:50px;
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #22c55e,
+            #3b82f6
+        );
+
+
+    transition:
+
+        0.5s;
+
+
+}
+
+
+
+
+
+/* ===========================
+   CONTAINER MAPA
+=========================== */
+
+
+
+.container-mapa {
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.container-mapa h1 {
+
+
+    font-size:42px;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+.subtitulo {
+
+
+    opacity:0.85;
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   GRID PERSONAGENS
+=========================== */
+
+
+.grid-personagens {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/* ===========================
+   CARDS
+=========================== */
+
+
+.card-personagem {
+
+
+    position:relative;
+
+
+    padding:30px 20px;
+
+
+    cursor:pointer;
+
+
+    background:
+
+        rgba(255,255,255,0.12);
+
+
+
+    border-radius:30px;
+
+
+    border:
+
+        1px solid rgba(255,255,255,0.25);
+
+
+
+    backdrop-filter:
+
+        blur(12px);
+
+
+
+    transition:
+
+        0.35s;
+
+
+
+    animation:
+
+        aparecer 0.7s ease;
+
+
+
+}
+
+
+
+
+
+.card-personagem:hover {
+
+
+    transform:
+
+        translateY(-12px);
+
+
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,0.35);
+
+
+}
+
+
+
+
+
+.card-personagem img {
+
+
+    width:140px;
+
+
+    height:140px;
+
+
+    object-fit:contain;
+
+
+    transition:
+
+        0.3s;
+
+
+}
+
+
+
+
+
+.card-personagem:hover img {
+
+
+    transform:
+
+        scale(1.12)
+        rotate(3deg);
+
+
+}
+
+
+
+
+
+.card-personagem h2 {
+
+
+    margin-top:15px;
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+.card-personagem p {
+
+
+    margin:15px 0;
+
+
+    opacity:0.85;
+
+
+}
+
+
+
+
+
+.status {
+
+
+    display:inline-block;
+
+
+    padding:8px 18px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+        rgba(255,255,255,0.15);
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+   PERSONAGENS BLOQUEADOS
+=========================== */
+
+
+.bloqueado {
+
+
+    opacity:0.55;
+
+
+    cursor:not-allowed;
+
+
+}
+
+
+
+.bloqueado:hover {
+
+
+    transform:none;
+
+
+}
+
+
+
+
+
+/* ===========================
+   CHEFE FINAL
+=========================== */
+
+
+.chefe {
+
+
+    border:
+
+        2px solid rgba(239,68,68,0.5);
+
+
+}
+
+
+
+.chefe img {
+
+
+    filter:
+
+        drop-shadow(
+            0 0 15px red
+        );
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   TELA DE PERSONAGEM
+===================================================== */
+
+
+
+.container-personagem {
+
+
+    min-height:100vh;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+.card-personagem-jogo {
+
+
+    width:100%;
+
+
+    max-width:750px;
+
+
+    text-align:center;
+
+
+    padding:40px;
+
+
+
+    background:
+
+        rgba(255,255,255,0.12);
+
+
+
+    backdrop-filter:
+
+        blur(15px);
+
+
+
+    border-radius:35px;
+
+
+    border:
+
+        1px solid rgba(255,255,255,0.2);
+
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,0.35);
+
+
+
+}
+
+
+
+
+
+
+.imagem-personagem {
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    object-fit:contain;
+
+
+    animation:
+
+        flutuarPersonagem 3s infinite;
+
+
+}
+
+
+
+
+
+@keyframes flutuarPersonagem {
+
+
+    0%,100% {
+
+
+        transform:
+
+            translateY(0);
+
+
+    }
+
+
+    50% {
+
+
+        transform:
+
+            translateY(-15px);
+
+
+    }
+
+
+}
+
+
+
+
+
+.card-personagem-jogo h1 {
+
+
+    font-size:40px;
+
+
+    margin:20px;
+
+
+}
+
+
+
+
+
+
+/* ===========================
+   DIÁLOGOS
+=========================== */
+
+
+.caixa-dialogo {
+
+
+    margin-top:30px;
+
+
+    padding:25px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+        rgba(0,0,0,0.25);
+
+
+}
+
+
+
+.icone-dialogo {
+
+
+    font-size:35px;
+
+
+}
+
+
+
+#textoDialogo {
+
+
+    min-height:70px;
+
+
+    font-size:18px;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+
+
+/* ===========================
+   ÁREAS ESCONDIDAS
+=========================== */
+
+
+.escondido,
+
+
+.oculto {
+
+
+    display:none!important;
+
+
+}
+
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+
+.area-quiz {
+
+
+    margin-top:30px;
+
+
+    padding:30px;
+
+
+    background:
+
+        rgba(255,255,255,0.1);
+
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.area-quiz h2 {
+
+
+    font-size:30px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+#perguntaQuiz {
+
+
+    font-size:20px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.alternativas {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.alternativa {
+
+
+    padding:15px;
+
+
+    border:none;
+
+
+    border-radius:20px;
+
+
+    cursor:pointer;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+
+    background:
+
+        rgba(255,255,255,0.15);
+
+
+
+    transition:
+
+        0.3s;
+
+
+
+}
+
+
+
+
+
+.alternativa:hover {
+
+
+    transform:
+
+        translateX(10px);
+
+
+
+    background:
+
+        rgba(255,255,255,0.3);
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESULTADO
+===================================================== */
+
+
+.area-info {
+
+
+    margin-top:30px;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+        rgba(255,255,255,0.12);
+
+
+    backdrop-filter:
+
+        blur(10px);
+
+
+
+}
+
+
+
+.area-info h2 {
+
+
+    font-size:30px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   BOTÃO FLUTUANTE
+===================================================== */
+
+
+.botao-flutuante {
+
+
+    position:fixed;
+
+
+    bottom:30px;
+
+
+    left:30px;
+
+
+
+    padding:14px 25px;
+
+
+    border-radius:50px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+
+    font-weight:700;
+
+
+    color:white;
+
+
+    background:
+
+        rgba(255,255,255,0.18);
+
+
+
+    backdrop-filter:
+
+        blur(10px);
+
+
+
+}
+
+
+
+
+
+.botao-flutuante:hover {
+
+
+    transform:
+
+        scale(1.05);
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   CERTIFICADO FINAL
+===================================================== */
+
+
+
+.container-certificado {
+
+
+    min-height:100vh;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+.certificado {
+
+
+    width:100%;
+
+
+    max-width:700px;
+
+
+
+    text-align:center;
+
+
+
+    padding:50px;
+
+
+
+    border-radius:40px;
+
+
+
+    background:
+
+        rgba(255,255,255,0.15);
+
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+
+    border:
+
+        2px solid rgba(255,255,255,0.3);
+
+
+
+    animation:
+
+        aparecer 1s ease;
+
+
+
+}
+
+
+
+
+
+.trofeu {
+
+
+    font-size:90px;
+
+
+    animation:
+
+        pulsar 2s infinite;
+
+
+}
+
+
+
+
+
+.certificado h1 {
+
+
+    font-size:55px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+.certificado h2 {
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+
+.mensagem-certificado {
+
+
+    margin:30px 0;
+
+
+    line-height:1.8;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+.xp-final {
+
+
+    margin:30px auto;
+
+
+    padding:20px;
+
+
+
+    width:250px;
+
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+        rgba(0,0,0,0.2);
+
+
+}
+
+
+
+.xp-final strong {
+
+
+    display:block;
+
+
+    font-size:45px;
+
+
+}
+
+
+
+
+
+
+.selo {
+
+
+    margin:25px auto;
+
+
+    padding:20px;
+
+
+    width:220px;
+
+
+
+    border-radius:30px;
+
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #facc15,
+            #f97316
+        );
+
+
+
+    color:white;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+
+footer {
+
+
+    text-align:center;
+
+
+    padding:20px;
+
+
+    opacity:0.7;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+
+
+@media(max-width:900px){
+
+
+
+    .hud {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .barra-container {
+
+
+        width:100%;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+    .card-inicial {
+
+
+        padding:30px 20px;
+
+
+    }
+
+
+
+
+    .card-inicial h1 {
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+
+    .container-mapa h1 {
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+
+    .card-personagem-jogo {
+
+
+        padding:25px;
+
+
+    }
+
+
+
+
+    .card-personagem-jogo h1 {
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+
+
+    .imagem-personagem {
+
+
+        width:170px;
+
+
+        height:170px;
+
+
+    }
+
+
+
+
+    .certificado {
+
+
+        padding:30px 20px;
+
+
+    }
+
+
+
+
+    .certificado h1 {
+
+
+        font-size:40px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+   ANIMAÇÕES EXTRAS
+===================================================== */
+
+
+
+@keyframes brilho {
+
+
+    0% {
+
+
+        box-shadow:
+
+        0 0 10px rgba(255,255,255,0.2);
+
+
+    }
+
+
+
+    50% {
+
+
+        box-shadow:
+
+        0 0 30px rgba(255,255,255,0.5);
+
+
+    }
+
+
+
+    100% {
+
+
+        box-shadow:
+
+        0 0 10px rgba(255,255,255,0.2);
+
+
+    }
+
+
+}
+
+
+
+.card-personagem:hover {
+
+
+    animation:
+
+        brilho 1.5s infinite;
+
+
+}
