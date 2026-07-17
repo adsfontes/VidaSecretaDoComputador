@@ -1271,29 +1271,23 @@ function carregarPersonagem(){
 
 function mostrarDialogo(){
 
-
-
     const texto =
-
-    document.getElementById(
-        "textoDialogo"
-    );
-
-
+    document.getElementById("textoDialogo");
 
     if(texto){
 
-
         texto.textContent =
-
-        personagemAtual.dialogos[
-            etapaDialogo
-        ];
-
+        personagemAtual.dialogos[etapaDialogo];
 
     }
 
+    // Se estiver na última fala...
+    if(etapaDialogo === personagemAtual.dialogos.length - 1){
 
+        botaoDialogo.classList.add("escondido");
+        botaoCuriosidade.classList.remove("escondido");
+
+    }
 
 }
 
@@ -1346,12 +1340,41 @@ if(botaoDialogo){
         else{
 
 
-            mostrarCuriosidade();
+            botaoDialogo.classList.add("escondido");
+
+            botaoCuriosidade.classList.remove("escondido");
 
 
 
         }
 
+
+
+    };
+
+
+
+}
+
+const botaoCuriosidade =
+
+document.getElementById(
+    "btnCuriosidade"
+);
+
+
+
+
+if(botaoCuriosidade){
+
+
+
+    botaoCuriosidade.onclick = ()=>{
+
+
+        mostrarCuriosidade();
+
+        botaoCuriosidade.classList.add("escondido");
 
 
     };
