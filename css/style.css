@@ -586,19 +586,45 @@ body {
 
 /* Tela da introdução */
 #introducao{
+
+    opacity:0;
+    transform:translateY(30px) scale(.96);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
     position: fixed;
     inset: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    padding: 30px;
+    padding:30px;
 
-    background: rgba(15, 8, 35, 0.75);
-    backdrop-filter: blur(4px);
+    background:rgba(15,8,35,.75);
+    backdrop-filter:blur(4px);
 
-    z-index: 999;
+    z-index:999;
+
+    pointer-events:none;
+}
+
+#introducao.ativo{
+
+    opacity:1;
+    transform:translateY(0) scale(1);
+
+    pointer-events:auto;
+
+}
+
+#introducao.saindo{
+
+    opacity:0;
+    transform:scale(.95);
+
 }
 
 /* Caixa da introdução */

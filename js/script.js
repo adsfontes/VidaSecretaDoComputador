@@ -738,25 +738,20 @@ document.getElementById(
 if(botaoIniciar){
 
 
-    botaoIniciar.onclick = ()=>{
+    botaoIniciar.onclick = () => {
 
-
-        document
+    document
         .querySelector(".card-inicial")
         .classList.add("oculto");
 
+    introducao.classList.remove("oculto");
 
+    // força o navegador a desenhar a tela
+    introducao.offsetHeight;
 
-        if(introducao){
+    introducao.classList.add("ativo");
 
-            introducao.classList.remove(
-                "oculto"
-            );
-
-        }
-
-
-    };
+};
 
 
 }
@@ -767,19 +762,21 @@ if(botaoIniciar){
 
 
 
-if(botaoContinuar){
+if (botaoContinuar) {
 
+    botaoContinuar.onclick = () => {
 
-    botaoContinuar.onclick = ()=>{
+    introducao.classList.remove("ativo");
 
+    setTimeout(() => {
 
-        window.location.href =
+        introducao.classList.add("oculto");
 
-        "pages/mapa.html";
+        window.location.href = "pages/mapa.html";
 
+    },700);
 
-    };
-
+};
 
 }
 
