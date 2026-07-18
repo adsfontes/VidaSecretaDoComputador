@@ -906,13 +906,6 @@ function atualizarMapa(){
 
 /* =====================================================
    SISTEMA DE DESBLOQUEIO
-
-   IMPORTANTE:
-
-   Todos os componentes ficam livres.
-
-   Apenas o vírus fica bloqueado.
-
 ===================================================== */
 
 

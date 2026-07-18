@@ -68,9 +68,9 @@ body {
     background:
         linear-gradient(
             135deg,
-            #050816,
-            #102542,
-            #1d4ed8
+            #0c0516,
+            #1c1042,
+            #5b1dd8
         );
 
 
@@ -94,7 +94,7 @@ body {
 
     height: 12px;
 
-    background: rgba(255,255,255,0.25);
+    background: rgba(178, 162, 18, 0.684);
 
     border-radius: 50%;
 
@@ -583,6 +583,64 @@ body {
 
 
 }
+
+/* Tela da introdução */
+#introducao{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: rgba(15, 8, 35, 0.75);
+    backdrop-filter: blur(4px);
+
+    z-index: 999;
+}
+
+/* Caixa da introdução */
+#introducao .janela-dialogo{
+    width: 100%;
+    max-width: 750px;
+
+    background: rgba(28, 17, 60, 0);
+
+    border: 2px solid #7b5cff;
+    border-radius: 20px;
+
+    box-shadow: 0 0 30px rgba(123,92,255,.35);
+
+    padding: 40px;
+    text-align: center;
+}
+
+#introducao h2{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+#introducao p{
+    color:#ddd;
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+#introducao h3{
+    color:#6cff7d;
+    margin:30px 0;
+    font-size:1.5rem;
+}
+
+#introducao .botao-principal{
+    margin-top:15px;
+}
+
+
 
 /* =====================================================
    MAPA DO JOGO
@@ -1964,7 +2022,7 @@ footer {
 
         box-shadow:
 
-        0 0 10px rgba(255,255,255,0.2);
+        0 0 10px rgba(0, 194, 45, 0.314);
 
 
     }
