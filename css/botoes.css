@@ -1,0 +1,297 @@
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+
+.botao-principal {
+
+
+    border: none;
+
+
+    padding: 16px 35px;
+
+
+    margin-top: 20px;
+
+
+    border-radius: 50px;
+
+
+    cursor: pointer;
+
+
+    font-size: 16px;
+
+
+    font-weight: 700;
+
+
+    color: white;
+
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+
+
+    transition:
+
+        0.3s;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,0.25);
+
+
+
+}
+
+
+
+.botao-principal:hover {
+
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+
+}
+
+#btnCuriosidade {
+
+
+    border: none;
+
+
+    padding: 16px 35px;
+
+
+    margin-top: 20px;
+
+
+    border-radius: 50px;
+
+
+    cursor: pointer;
+
+
+    font-size: 16px;
+
+
+    font-weight: 700;
+
+
+    color: white;
+
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #16a34a
+        );
+
+
+
+    transition:
+
+        0.3s;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,0.25);
+
+
+
+}
+
+#btnCuriosidade:hover {
+
+
+    transform:
+
+        translateY(-5px)
+        scale(1.05);
+
+
+}
+
+
+
+
+.botao-secundario {
+
+
+    padding: 14px 30px;
+
+
+    border-radius: 50px;
+
+
+    border: none;
+
+
+    cursor: pointer;
+
+
+    font-weight: 700;
+
+
+    background:
+
+        rgba(255,255,255,0.15);
+
+
+    color:white;
+
+
+    backdrop-filter: blur(10px);
+
+
+}
+
+
+
+.botao-secundario:hover {
+
+
+    background:
+
+        rgba(255,255,255,0.3);
+
+
+}
+
+
+
+
+
+@keyframes aparecer {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+            translateY(50px);
+
+
+    }
+
+
+    to {
+
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+@keyframes pulsar {
+
+
+    0%,100% {
+
+        transform:scale(1);
+
+    }
+
+
+    50% {
+
+        transform:scale(1.05);
+
+    }
+
+
+}
+
+/* =====================================================
+   BOTÃO FLUTUANTE
+===================================================== */
+
+
+.botao-flutuante {
+
+
+    position:fixed;
+
+
+    bottom:30px;
+
+
+    left:30px;
+
+
+
+    padding:14px 25px;
+
+
+    border-radius:50px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+
+    font-weight:700;
+
+
+    color:white;
+
+
+    background:
+
+        rgba(255,255,255,0.18);
+
+
+
+    backdrop-filter:
+
+        blur(10px);
+
+
+
+}
+
+
+
+
+
+.botao-flutuante:hover {
+
+
+    transform:
+
+        scale(1.05);
+
+
+}
+
