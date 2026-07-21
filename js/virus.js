@@ -13,7 +13,6 @@
 function verificarFinal(){
 
 
-
     const pagina =
 
     window.location.pathname;
@@ -33,7 +32,7 @@ function verificarFinal(){
     &&
 
     personagemAtual.chefe
-
+    
     ){
 
 
@@ -45,14 +44,12 @@ function verificarFinal(){
         ===
 
         configuracaoJogo.totalMissoes
-
+          
         ){
 
-
-
-            // aqui futuramente pode entrar
-            // batalha final com 5 perguntas
-
+            
+iniciarBatalhaVirus();
+            iniciarBatalhaVirus();
 
 
         }
@@ -82,7 +79,6 @@ let acertosChefe = 0;
 
 
 function iniciarBatalhaVirus(){
-
 
     perguntaChefeAtual = 0;
 
@@ -254,7 +250,7 @@ function finalizarBatalhaVirus(){
 
     if(
 
-    acertosChefe === 5
+    acertosChefe === personagens.virus.perguntasChefe.length
 
     ){
 

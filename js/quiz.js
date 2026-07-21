@@ -88,7 +88,13 @@ function mostrarPergunta(){
         return;
 
 
+  
+    if (personagemAtual.chefe) {
 
+        iniciarBatalhaVirus();
+        return;
+
+    }  
 
     pergunta.textContent =
 
